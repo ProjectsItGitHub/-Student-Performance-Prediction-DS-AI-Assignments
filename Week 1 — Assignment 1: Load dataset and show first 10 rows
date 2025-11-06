@@ -1,0 +1,26 @@
+import pandas as pd
+import os
+
+# Try to load real dataset; fallback to sample if not present
+filename = "StudentsPerformance.csv"
+
+if os.path.exists(filename):
+    data = pd.read_csv(filename)
+    source = "StudentsPerformance.csv (loaded)"
+else:
+    # Sample fallback
+    data = pd.DataFrame({
+        'gender': ['female','male','female','male','female','male','female','male','female','male'],
+        'race/ethnicity': ['group A','group B','group C','group A','group B','group C','group A','group B','group C','group A'],
+        'parental_level_of_education': ['bachelor's degree','some college','master's degree','associate degree','high school','some college','associate degree','high school','bachelor's degree','some college'],
+        'lunch': ['standard','standard','free/reduced','standard','free/reduced','standard','standard','free/reduced','standard','free/reduced'],
+        'test_preparation_course': ['none','completed','none','none','completed','none','completed','none','none','completed'],
+        'math_score': [72,69,90,47,76,71,88,40,64,38],
+        'reading_score': [72,90,95,57,78,83,95,43,64,60],
+        'writing_score': [74,88,93,44,75,78,92,39,67,50]
+    })
+    source = "Sample fallback dataset (no CSV found)"
+
+print(f"Data source: {source}")
+print("\nFirst 10 rows:")
+data.head(10)
