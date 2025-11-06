@@ -26,6 +26,7 @@ Apply unsupervised learning (K-Means Clustering).
 Derive insights into how factors like parental education, gender, and test preparation influence student results.
 
 📂 Repository Structure
+
 📁 Student-Performance-Prediction/
 │
 ├── 📓 StudentPerformance_Weeks1-8_Assignments.ipynb    # Combined notebook (Weeks 1–8)
@@ -34,16 +35,27 @@ Derive insights into how factors like parental education, gender, and test prepa
 ├── 📘 README.md                                         # Project overview (this file)
 └── 📊 Outputs/                                          # (Optional) Plots & visualizations
 
+
 🗓️ Weekly Assignment Summary
+
 Week	Topic	Description	Output
+
 1	Dataset Loading	Loaded dataset & showed first 10 rows	StudentsPerformance.csv
+
 2	Data Cleaning	Removed duplicates, handled missing values, standardized columns	StudentsPerformance_Cleaned.csv
+
 3	Visualization	Created 5 data plots (Histogram, Boxplot, Scatter, Bar, Countplot)	Charts
+
 4	Statistics & Correlation	Calculated mean, median, variance, and correlation	Top 3 features found
+
 5	Regression	Linear Regression model with MAE & RMSE evaluation	Model metrics
+
 6	Classification	Logistic Regression & Random Forest (pass/fail)	Accuracy & F1-score
+
 7	Model Evaluation	Confusion matrix, ROC curve, precision/recall	Evaluation plots
+
 8	Clustering	K-Means clustering visualized using PCA	Cluster visualization
+
 🧠 Key Learnings
 
 Practical application of Python, Pandas, Matplotlib, Seaborn, and Scikit-learn.
