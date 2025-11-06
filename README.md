@@ -1,7 +1,11 @@
 Student: Fatima Sami
+
 Project Type: Solo (Roll Number ends with 0 → Student Performance Prediction)
+
 Course: Data Science - AI (Practical, Project-Oriented Course)
+
 Instructor: Dr. Muhammad Mohsin Nazir
+
 Institute: Lahore College for Women University (LCWU)
 
 📘 Project Overview
