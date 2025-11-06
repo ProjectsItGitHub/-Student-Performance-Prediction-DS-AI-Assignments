@@ -1,0 +1,56 @@
+# Week 3: Data Visualization
+import matplotlib.pyplot as plt
+import pandas as pd
+
+# load cleaned data
+df = pd.read_csv("StudentsPerformance_Cleaned.csv") if os.path.exists("StudentsPerformance_Cleaned.csv") else data.copy()
+
+# 1) Distribution of math scores (histogram)
+plt.figure()
+df['math_score'].hist(bins=15)
+plt.title("Distribution of Math Scores")
+plt.xlabel("Math Score")
+plt.ylabel("Count")
+plt.show()
+
+# Insight: Check skewness and common score ranges.
+
+# 2) Boxplot of reading scores by gender
+plt.figure()
+df.boxplot(column='reading_score', by='gender', grid=False)
+plt.title("Reading Score by Gender")
+plt.suptitle('')                                                                                                                                                                             plt.xlabel("Gender")
+plt.ylabel("Reading Score")
+plt.show()
+
+# Insight: Compare medians and outliers between genders.
+
+# 3) Scatter plot: math vs writing scores
+plt.figure()
+plt.scatter(df['math_score'], df['writing_score'])
+plt.xlabel("Math Score")
+plt.ylabel("Writing Score")
+plt.title("Math vs Writing Scores")
+plt.show()
+
+# Insight: Check correlation between math and writing performance.
+
+# 4) Bar plot: average scores by parental level of education
+plt.figure(figsize=(8,4))
+grouped = df.groupby('parental_level_of_education')[['math_score','reading_score','writing_score']].mean()
+grouped.plot(kind='bar')
+plt.title("Average Scores by Parental Level of Education")
+plt.ylabel("Average Score")
+plt.xticks(rotation=45)
+plt.tight_layout()
+plt.show()                                                                                                                                                                             # Insight: Higher parental education may align with higher average scores.
+
+# 5) Countplot of test preparation completion
+plt.figure()
+df['test_preparation_course'].value_counts().plot(kind='bar')
+plt.title("Test Preparation Course Completion Counts")
+plt.xlabel("Course")
+plt.ylabel("Count")
+plt.show()
+
+# Insight: See how many students completed the prep course and consider its effect on scores.                                                                                                                                                                          
