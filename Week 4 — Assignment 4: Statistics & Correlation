@@ -1,0 +1,23 @@
+import pandas as pd
+import numpy as np
+from scipy import stats
+
+df = pd.read_csv("StudentsPerformance_Cleaned.csv") if os.path.exists("StudentsPerformance_Cleaned.csv") else data.copy()
+
+# Create a target variable - average_score
+df['average_score'] = df[['math_score','reading_score','writing_score']].mean(axis=1)
+
+# Basic stats
+stats_df = df[['math_score','reading_score','writing_score','average_score']].agg(['mean','median','var'])
+print("Basic statistics:\n", stats_df)
+
+# Mode example for categorical
+print("\nMode of parental_level_of_education:", df['parental_level_of_education'].mode()[0])
+
+# Correlation matrix (Pearson)
+corr = df.corr()
+print("\nCorrelation matrix:\n", corr['average_score'].sort_values(ascending=False))
+
+# Identify top 3 numeric features correlated with average_score
+top3 = corr['average_score'].abs().sort_values(ascending=False).index[1:4].tolist()
+print("\nTop 3 numeric features most related to average_score:", top3)
