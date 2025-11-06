@@ -1,0 +1,35 @@
+import pandas as pd
+
+# assume 'data' variable exists (from Week 1). If not, load sample again.
+try:
+    data
+except NameError:
+    data = pd.read_csv("StudentsPerformance.csv") if os.path.exists("StudentsPerformance.csv") else pd.DataFrame()
+
+print("Before cleaning — shape:", data.shape)
+print("\nMissing values per column:\n", data.isnull().sum())
+
+# Remove exact duplicate rows
+dup_count = data.duplicated().sum()
+print(f"Duplicate rows before: {dup_count}")
+data = data.drop_duplicates()
+
+# Standardize column names
+data.columns = [col.strip().lower().replace(" ", "_").replace("/", "_").replace("__","_") for col in data.columns]
+
+# Handle missing values: categorical -> mode, numeric -> mean
+for col in data.columns:
+    if data[col].dtype == 'object':
+        if data[col].isnull().any():
+            data[col].fillna(data[col].mode()[0], inplace=True)
+    else:
+        if data[col].isnull().any():
+            data[col].fillna(data[col].mean(), inplace=True)
+
+print("\nAfter cleaning — shape:", data.shape)
+print("\nMissing values after cleaning:\n", data.isnull().sum())
+
+# Save cleaned dataset
+cleaned_name = "StudentsPerformance_Cleaned.csv"
+data.to_csv(cleaned_name, index=False)
+print(f"Cleaned dataset saved as {cleaned_name}")
