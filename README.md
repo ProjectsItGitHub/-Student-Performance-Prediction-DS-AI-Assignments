@@ -16,10 +16,14 @@ The selected project is Student Performance Prediction, which focuses on analyzi
 🧩 Objectives
 
 Collect, clean, visualize, and analyze student performance data.
+
 Build predictive ML models (Regression & Classification).
-Evaluate models using multiple metrics (MAE, RMSE, Accuracy, F1-Score, ROC AUC).
+
+Evaluate models using metrics like MAE, RMSE, Accuracy, F1-Score, and ROC AUC.
+
 Apply unsupervised learning (K-Means Clustering).
-Develop insights into how features like parental education, test preparation, and gender affect performance.
+
+Derive insights into how factors like parental education, gender, and test preparation influence student results.
 
 📂 Repository Structure
 📁 Student-Performance-Prediction/
@@ -40,24 +44,43 @@ Week	Topic	Description	Output
 6	Classification	Logistic Regression & Random Forest (pass/fail)	Accuracy & F1-score
 7	Model Evaluation	Confusion matrix, ROC curve, precision/recall	Evaluation plots
 8	Clustering	K-Means clustering visualized using PCA	Cluster visualization
-
 🧠 Key Learnings
+
 Practical application of Python, Pandas, Matplotlib, Seaborn, and Scikit-learn.
+
 Understanding the end-to-end Data Science workflow.
-Gained insights into data cleaning, visualization, feature selection, and model building.
+
+Gained insights into data cleaning, visualization, feature selection, and model evaluation.
+
 Improved ability to analyze and interpret educational data patterns.
 
 🚀 Future Scope
 
-Expand the dataset with additional features (attendance, study time, socio-economic factors).
-Apply Deep Learning models for better performance prediction.
-Build a Flask/FastAPI app for real-time student performance forecasting.
+Expand dataset with more student-related features (attendance, study time, socio-economic factors).
+
+Apply Deep Learning models for advanced performance prediction.
+
+Deploy using Flask/FastAPI for real-time student score forecasting.
 
 📚 References
 
 Kaggle Dataset: Students Performance in Exams Dataset
+
 Course Guide: Data Science - AI (Practical, Project-Oriented Course) — by Dr. Muhammad Mohsin Nazir
+
 Pandas Documentation: https://pandas.pydata.org
+
+NumPy Documentation: https://numpy.org/doc/
+
+Matplotlib Tutorials: https://matplotlib.org/stable/tutorials/
+
+Scikit-Learn Documentation: https://scikit-learn.org/stable/user_guide.html
+
+Storytelling with Data: Cole Nussbaumer Knaflic
+
+Khan Academy – Statistics & Probability: https://www.khanacademy.org/math/statistics-probability
+
+
 NumPy Documentation: https://numpy.org/doc/
 Matplotlib Tutorials: https://matplotlib.org/stable/tutorials/
 Scikit-Learn Documentation: https://scikit-learn.org/stable/user_guide.html
