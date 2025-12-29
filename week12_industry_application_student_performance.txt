@@ -1,0 +1,5 @@
+WEEK 12 — Industry Application of Student Performance Prediction
+
+This project can be applied in educational institutions, online learning platforms, and student counseling systems.
+
+AI-powered student performance prediction helps identify students at risk, provides personalized learning recommendations, and supports data-driven decision-making for improving academic outcomes.
